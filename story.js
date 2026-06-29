@@ -1,18 +1,26 @@
 const story = {
   start: {
-    text: "Kamu bangun di kapal luar angkasa yang rusak...",
+    text: "Kamu bangun di Kasur tua yang rapuh. Kamu merasa ada sesuatu yang salah. Apa yang akan kamu lakukan?",
     choices: [
-      { text: "Periksa ruang kontrol", next: "control" },
+      { text: "Bangkit dan periksa sekitar", next: "ruang_berikut" },
       { text: "Tidur lagi", next: "dead" }
     ]
   },
 
-  control: {
-    text: "Sistem AI menyapa kamu: 'Butuh bantuan?'",
+  ruang_berikut: {
+    text: "Kamu melihat ruang berikutnya. Ada sesuatu yang mencurigakan di sana.",
     choices: [
-      { text: "Percaya AI", next: "good" },
-      { text: "Matikan AI", next: "bad" }
+      { text: "Periksa lebih dekat", next: "meja" },
+      { text: "Kembali ke kasur", next: "dead" }
     ]
+  },
+
+
+  // ending scenes
+  
+  meja: {
+    text: "Tamat kamu berhasil menemukan meja",
+    choices: []
   },
 
   good: {
@@ -26,7 +34,7 @@ const story = {
   },
 
   dead: {
-    text: "Kamu kehabisan oksigen saat tidur... ☠️",
+    text: "Kamu mati karena tidak bangun. Game Over. 💀",
     choices: []
   }
 };
